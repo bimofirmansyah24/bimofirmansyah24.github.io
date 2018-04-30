@@ -89,23 +89,26 @@ function myFunction() {
       <p>"KYRIE IRVING"
     </div>
     
-    <div id="wrapper">
-<div id="centerbox">
-   <div id="isi">Isi pertama</div>
-   <div id="isi">Isi kedua</div>
-   <div id="isi">Isi ketiga</div>
-   
+    <script>
+   $(document).ready(function() {
+  
+     $("#tombol_app").click(function() {
+       $("#box").append("<p>Sedang Dalam Pengembangan</p>");
+     })
+  
+     $("#tombol_pre").click(function() {
+       $("#box").prepend("<p>Mohonmaaf Atas Ketidaknyamanan</p>");
+     })
+  
+   });
+   </script>
+</head>
+<body>
+<div id="box">
+   <h2>Orang yang tidak pernah berbuat kesalahan biasanya adalah orang yang tidak pernah berbuat sesuatu.– W.C Magee</h2>
 </div>
-
-<div id="form">
-<form method="post" action="" id="chatform">
-<input type="text" name="chat" id="chat"><input type="submit" name="submit" id="submit_chat" value="Chat">
-</form>
-<script type="text/javascript" src="script.js"></script>
-
-</div>
-
-</div>
+<button id="tombol_app">Append</button>
+<button id="tombol_pre">Prepend</button>
 
 <footer class="container-fluid bg-4 text-center">
       <hr style="background-color: #4E4E4E;">
