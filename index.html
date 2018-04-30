@@ -25,41 +25,34 @@ if (new Date().getHours() < 18) {
 </div>
   
   <div class="container" style="background: #808080; color: black"> 
-<SCRIPT language="JavaScript">
-<!--
-function tanyabilangan()
-{
-var bil = parseFloat(document.fform.bilangan.value);
-var jenis = " ";
-if(isNaN(bil))
-{
-alert("Anda belum memasukkan angka");
+<p>Tanggal Berapa Nike Didirikan. Pilih jawaban: a.22, b.30, c.25, d.11 or e.2?</p>
+
+<input id="myInput" type="text">
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var letter = document.getElementById("myInput").value;
+    var text;
+
+    // If the letter is "c"
+    if (letter === "c") {
+        text = "Lebih tepatnya January 25, 1964 Berbasis dari nama dewi Yunani yang berarti kemenangan, Nike didirikan tahun 1964 ketika atlet sekaligus pengusaha Oregon bernama Phillip Knight, mengagas impor sepatu lari dari Jepang untuk bersaing dengan merek Jerman seperti Adidas dan Puma yang kemudian mendominasi pasar Amerika Serikat. Keuntungannya adalah bahwa sepatu Jepang lebih murah karena tenaga kerja lebih murah di Jepang.";
+        
+    // If the letter is "b" or "d"
+    } else if (letter === "b" || letter === "d") {
+        text = "Mendekati tapi coba lagi";
+        
+    // If the letter is anything else
+    } else {
+        text = "Coba Lagi";
+    }
+    document.getElementById("demo").innerHTML = text;
 }
-else
-{ 
-if (bil > 0)
-{
-jenis = " Tipe permainan anda sering shooting di parameter kita menyarankan pilih kyrie atau kobe";
-}
-else if (bil < 0)
-{
-jenis = " Tipe permainan anda sering masuk kedalam mencetak poin melalui body konta kita menyarankan pilih lbj atau kd ";
-}
-else
-{
-jenis = " Tipe permainan anda stabil terkadang menyerang kedalam dan shooting kita menyarankan kd atau kobe";
-} 
-alert (bil+" "+jenis);
-} 
-}
-//--></SCRIPT>
-<FORM NAME ="fform">
-<H2><BR>Pilih angka diantara -1,0,1 sehingga kita bisa membantu anda???</H2>
-Masukkan Bilangan :<input type="text" size="11" name="bilangan">
-<P>
-<INPUT TYPE="button" value="Tanya" onclick="tanyabilangan()">
-<INPUT TYPE="reset" value="Ulang"> </p>
-</FORM> 
+</script>
 </div>
   
 <div class="container">
