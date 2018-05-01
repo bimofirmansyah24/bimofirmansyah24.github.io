@@ -19,7 +19,7 @@ if (new Date().getHours() < 18) {
 </script>
 <div class="jumbotron text-center" style="background: #000000; color: white">
   <h1>Nike Elite Basketball Club</h1>
-  <img src="Bball.jpg" class="rounded" alt="Cinque Terre" width="320" height="240"> 
+  <img src="images/Bball.jpg" class="rounded" alt="Cinque Terre" width="320" height="240"> 
   <p>BODY UNDER CONSTRUCTRUCTION MIND ON A MISSION</p> 
 </div>
   
@@ -58,7 +58,7 @@ function myFunction() {
   <div class="row">
     <div class="col-sm-3" style="background: #000000; color: white">
       <h1>THE WAY OF KD</h1>
-      <img src="durant.jpg" class="rounded" alt="Cinque Terre" width="260" height="200"> 
+      <img src="images/durant.jpg" class="rounded" alt="Cinque Terre" width="260" height="200"> 
       <a href="Thewayofkd.html" class="btn btn-info" role="button">Start Now</a>
       <p>I don't know what I'm going to do tomorrow. I just know for sure I'm going to keep playing basketball.</p>
       <p>I'm a basketball player. That's what I do and what I love but that's just not all who I am. I'm talented in a lot of different areas</p>
@@ -66,7 +66,7 @@ function myFunction() {
     </div>
     <div class="col-sm-3" style="background: #800000; color: white">
        <h1>THE WAY OF LBJ</h1>
-       <img src="lebron.jpg" class="rounded" alt="Cinque Terre" width="260" height="200"> 
+       <img src="images/lebron.jpg" class="rounded" alt="Cinque Terre" width="260" height="200"> 
        <a href="Thewayoflbj.html" class="btn btn-info" role="button">Start now</a>
        <p>As a professional athlete a lot is going to be said about you - but I just try to move forward and try to achieve my goals.</p>
        <p>You can't be afraid to fail. It's the only way you succeed - you're not gonna succeed all the time, and I know that.</p>
@@ -74,7 +74,7 @@ function myFunction() {
     </div>
     <div class="col-sm-3" style="background: #000000; color: white">
       <h1>THE WAY OF KOBE</h1>
-      <img src="kobe.jpg" class="rounded" alt="Cinque Terre" width="260" height="200"> 
+      <img src="images/kobe.jpg" class="rounded" alt="Cinque Terre" width="260" height="200"> 
        <a href="thewayofkobe.html" class="btn btn-info" role="button">Start now</a>
        <p>Everyone looks at your watch and it represents who you are, your values and your personal style.</p>
        <p>I focus on one thing and one thing only - that's trying to win as many championships as I can.</p>
@@ -82,15 +82,15 @@ function myFunction() {
     </div>
     <div class="col-sm-3" style="background: #228B22; color: white">
       <h1>THE WAY OF KYRIE</h1>
-      <img src="kyrie.jpg" class="rounded" alt="Cinque Terre" width="260" height="200">
+      <img src="images/kyrie.jpg" class="rounded" alt="Cinque Terre" width="260" height="200">
        <a href="thewayofkyrie.html" class="btn btn-info" role="button">Start now</a>    
       <p>When I'm playing the 1-guard,teams do a great job of just loading up and preparing for my drives and preparing for my three-point shots.</p>
       <p>OI'm going to give input when I need to. When it needs to be said.</p>
       <p>"KYRIE IRVING"
     </div>
-    
-    <center>Want their shoes</p>
-    <p> Look below and cop a pair from the store</p>
+
+    <center>Survey Beberapa orang</p>
+    <p> Lebih banyak orang memilih apa?</p>
     
     <script>
    $(document).ready(function() {
@@ -106,6 +106,33 @@ function myFunction() {
    });
    </script>
 </head>
+<div id="piechart"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Lebron James', 8],
+  ['Kevin Durant', 5],
+  ['Kyrie Irving', 5],
+  ['Kobe Bryant', 6],
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'My Average Day', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
 <body>
 <div id="box">
    <h2>Orang yang tidak pernah berbuat kesalahan biasanya adalah orang yang tidak pernah berbuat sesuatu.– W.C Magee</h2>
