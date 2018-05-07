@@ -134,6 +134,37 @@ function drawChart() {
 }
 </script>
 <body>
+	<h2>Lopping belajar.</h2>
+
+<script language="JavaScript">
+  var x = 0;
+  while(x < 5)
+  {
+    document.writeln("Ini Adalah Pengulangan While<br>");
+    x++;
+  }
+</script>
+<script language="JavaScript">
+for(x=1; x<=5; x++)
+{
+  document.writeln("Ini Adalah Pengulangan FOR<br>");
+}
+</script>
+
+<script>
+   $(document).ready(function() {
+  
+     $("#tombol_app").click(function() {
+       $("#box").append("<p>Sedang Dalam Pengembangan</p>");
+     })
+  
+     $("#tombol_pre").click(function() {
+       $("#box").prepend("<p>Mohonmaaf Atas Ketidaknyamanan</p>");
+     })
+  
+   });
+   </script>
+   </div>
 <div id="box">
    <h2>Orang yang tidak pernah berbuat kesalahan biasanya adalah orang yang tidak pernah berbuat sesuatu.– W.C Magee</h2>
 </div>
